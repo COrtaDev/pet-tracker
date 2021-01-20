@@ -1,4 +1,5 @@
 import React from 'react';
+import OwnerLink from './OwnerLink';
 
 const OwnersList = (props) =>
     <>
@@ -6,7 +7,7 @@ const OwnersList = (props) =>
         <ul>
             {props.owners.map(owner =>
                 <li key={owner.id}>
-                    {owner.firstName}
+                    <OwnerLink href={owner.href} firstName={owner.firstName} lastName={owner.lastName} />
                 </li>
             )}
         </ul>
